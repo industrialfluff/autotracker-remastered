@@ -1,9 +1,9 @@
 [Default]
-SMP_GUITAR = samples/Default/ks_guitar.wav
-SMP_BASS = samples/Default/ks_bass.wav
-SMP_PIANO = samples/Default/ks_piano.wav
-SMP_HOOVER = samples/Default/hoover.wav
-SMP_KICK = samples/Default/kick.wav
-SMP_HHC = samples/Default/nh_hihat_closed.wav
-SMP_HHO = samples/Default/nh_hihat_open.wav
-SMP_SNARE = samples/Default/nh_snare.wav
+SMP_GUITAR = ["samples/Default/ks_guitar.wav"]
+SMP_BASS = ["samples/Default/ks_bass.wav"]
+SMP_PIANO = ["samples/Default/ks_piano.wav"]
+SMP_HOOVER = ["samples/Default/hoover.wav"]
+SMP_KICK = ["samples/Default/kick.wav"]
+SMP_HHC = ["samples/Default/nh_hihat_closed.wav"]
+SMP_HHO = ["samples/Default/nh_hihat_open.wav"]
+SMP_SNARE = ["samples/Default/nh_snare.wav"]

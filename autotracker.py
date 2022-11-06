@@ -4,6 +4,7 @@
 import sys, struct, random, math
 import numpy as np
 import ConfigParser
+import json
 
 from samples import *
 from key import *
@@ -29,14 +30,25 @@ for section_name in config_parser.sections():
 chosen_section = random.choice(sections)    
 
 # load the samples into the Impulse Tracker file first           
-SMP_GUITAR = itf.smp_add(SampleFromFile(fname=config_parser.get(chosen_section, 'SMP_GUITAR')))
-SMP_BASS = itf.smp_add(SampleFromFile(fname=config_parser.get(chosen_section, 'SMP_BASS')))
-SMP_PIANO = itf.smp_add(SampleFromFile(fname=config_parser.get(chosen_section, 'SMP_PIANO')))
-SMP_HOOVER = itf.smp_add(SampleFromFile(fname=config_parser.get(chosen_section, 'SMP_HOOVER')))
-SMP_KICK = itf.smp_add(SampleFromFile(fname=config_parser.get(chosen_section, 'SMP_KICK')))
-SMP_HHC = itf.smp_add(SampleFromFile(fname=config_parser.get(chosen_section, 'SMP_HHC')))
-SMP_HHO = itf.smp_add(SampleFromFile(fname=config_parser.get(chosen_section, 'SMP_HHO')))
-SMP_SNARE = itf.smp_add(SampleFromFile(fname=config_parser.get(chosen_section, 'SMP_SNARE')))
+guitar_choices = json.loads(config_parser.get(chosen_section, "SMP_GUITAR"))
+bass_choices = json.loads(config_parser.get(chosen_section, "SMP_BASS"))
+piano_choices = json.loads(config_parser.get(chosen_section, "SMP_PIANO"))
+hoover_choices = json.loads(config_parser.get(chosen_section, "SMP_HOOVER"))
+kick_choices =  json.loads(config_parser.get(chosen_section, "SMP_KICK"))        
+hhc_choices =  json.loads(config_parser.get(chosen_section, "SMP_HHC"))        
+hho_choices =  json.loads(config_parser.get(chosen_section, "SMP_HHO"))        
+snare_choices =  json.loads(config_parser.get(chosen_section, "SMP_SNARE"))        
+
+# each item in the config may now contain several variatins of that sample
+# this will randomly select from that list
+SMP_GUITAR = itf.smp_add(SampleFromFile(fname=random.choice(guitar_choices)))
+SMP_BASS = itf.smp_add(SampleFromFile(fname=random.choice(bass_choices)))
+SMP_PIANO = itf.smp_add(SampleFromFile(fname=random.choice(piano_choices)))
+SMP_HOOVER = itf.smp_add(SampleFromFile(fname=random.choice(hoover_choices)))
+SMP_KICK = itf.smp_add(SampleFromFile(fname=random.choice(kick_choices)))
+SMP_HHC = itf.smp_add(SampleFromFile(fname=random.choice(hhc_choices)))
+SMP_HHO = itf.smp_add(SampleFromFile(fname=random.choice(hho_choices)))
+SMP_SNARE = itf.smp_add(SampleFromFile(fname=random.choice(snare_choices)))
 
 # add all instruments here so all channels can be assigned
 drums = Generator_Drums(s_kick = SMP_KICK, s_snare = SMP_SNARE, s_hhc = SMP_HHC, s_hho = SMP_HHO)

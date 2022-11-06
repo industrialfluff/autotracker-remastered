@@ -16,6 +16,10 @@ Python 2.7
 ## Installation
 It's a set of scripts.  Run them in your favorite IDE or console.  Watch the song appear.  Load it into OpenMPT. https://openmpt.org/  Edit it to your heart's content.  Enjoy.
 
+## Configuration
+The config.txt file contains a path for each of the samples that will be used when randomly generating a song.
+Each item is parsed as JSON.
+
 ## Usage
 ```
 C:\Python27\python.exe autotracker.py
