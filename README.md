@@ -18,7 +18,7 @@ It's a set of scripts.  Run them in your favorite IDE or console.  Watch the son
 
 ## Configuration
 The config.txt file contains a path for each of the samples that will be used when randomly generating a song.
-Each item is parsed as JSON.  It is divided into sections so that you can generate songs with different "bands" of instruments.  Multiple files on each line means it will randomly pick one of them to use for the song, allowing the songs to vary slightly each time.
+Each item is parsed as JSON.  It is divided into sections so that you can generate songs with different "bands" of instruments.  Multiple files on each line means it will randomly pick one of them to use for the song, allowing the songs to vary slightly each time.  To add a new band, just copy the section labeled Default, append it to the file, and change the name and sample paths.
 
 ## Usage
 ```
