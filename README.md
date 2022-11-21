@@ -14,7 +14,7 @@ The name generator was heavily expanded and modified for many more interesting c
 Python 2.7
 
 ## Installation
-It's a set of scripts.  Run them in your favorite IDE or console.  Watch the song appear.  Load it into OpenMPT. https://openmpt.org/  Or Psycle. https://sourceforge.net/projects/psycle/    Edit it to your heart's content.  Enjoy.
+It's a set of scripts.  Run autotracker.py in your favorite IDE or console.  Watch the song appear in the songs directory.  Load it into OpenMPT. https://openmpt.org/  Or Psycle. https://sourceforge.net/projects/psycle/    Edit it to your heart's content.  Enjoy.
 
 ## Configuration
 The config.txt file contains a path for each of the samples that will be used when randomly generating a song.
